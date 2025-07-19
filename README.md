@@ -26,7 +26,7 @@ This repository is dedicated to all the tasks completed by me as part of the **A
 
 ### 🌐 Let's Connect
 
-📫 GitHub: [vaibhavreddy0226](https://github.com/vaibhavreddy0226)  
+📫 GitHub: [vaibhavreddy0226](https://github.com/vaibhavreddy0226?tab=repositories)  
 💬 Feel free to explore, fork, or star the repo if you like my work!
 
 ---
