@@ -26,7 +26,7 @@ This repository is dedicated to all the tasks completed by me as part of the **A
 
 ### 🌐 Let's Connect
 
-📫 GitHub: [vaibhavreddy07](https://github.com/vaibhavreddy07)  
+📫 GitHub: [vaibhavreddy07](https://github.com/dashboard/)  
 💬 Feel free to explore, fork, or star the repo if you like my work!
 
 ---
