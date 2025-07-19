@@ -1,7 +1,7 @@
 # 👋 Hello, World!
 
 ## I'm **Vaibhav Reddy** 👨‍💻  
-🎓 Student of **Artificial Intelligence & Data Science**  
+🎓 Student of **Artificial Intelligence & Data Science** *Amrita Vishwa vidyapeetham* 
 🧠 Passionate about **coding**, **problem-solving**, and **building cool stuff on the web!**
 
 ---
@@ -26,7 +26,7 @@ This repository is dedicated to all the tasks completed by me as part of the **A
 
 ### 🌐 Let's Connect
 
-📫 GitHub: [vaibhavreddy07](https://github.com/dashboard/)  
+📫 GitHub: [vaibhavreddy0226](https://github.com/dashboard/)  
 💬 Feel free to explore, fork, or star the repo if you like my work!
 
 ---
