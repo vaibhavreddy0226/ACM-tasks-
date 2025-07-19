@@ -1,7 +1,7 @@
 # 👋 Hello, World!
 
 ## I'm **Vaibhav Reddy** 👨‍💻  
-🎓 Student of **Artificial Intelligence & Data Science** *Amrita Vishwa vidyapeetham* 
+🎓 Student of **Artificial Intelligence & Data Science** **Amrita Vishwa vidyapeetham** 
 🧠 Passionate about **coding**, **problem-solving**, and **building cool stuff on the web!**
 
 ---
