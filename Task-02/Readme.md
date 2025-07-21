@@ -27,10 +27,9 @@ To complete all the levels of [Flexbox Froggy](https://flexboxfroggy.com/) by wr
 
 ---
 
-## 📂 Files (If applicable)
+## 📂 Files 
 
-- **`flexboxfroggy_task.txt`** – My answers or notes for each level
-- **Screenshots** (optional) – Completed levels or tricky ones for future reference
+- **Screenshot** – Final screenshot of the task completion
 
 ---
 
