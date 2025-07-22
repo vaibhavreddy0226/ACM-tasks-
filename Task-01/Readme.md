@@ -10,19 +10,10 @@ This is the **README** for **Task-01**. I've made a special spot (a dedicated **
 
 ### What I've Done So Far 🎉
 
-* Mastered **all the important Git commands** using Git Bash.
-* Successfully **saved and uploaded** my changes like a pro using the right Git steps.
-* Finished **all 23 Git exercises** for this task – boom! 💥
+* Learned **important Git commands** using Git Bash.
+* Successfully **saved and uploaded** my changes using the right Git steps.
+* Finished **12 git exercises out of 23** for this task 
 
----
-
-### Inside This Folder 📁
-
-You'll find:
-
-* This `README` file you're reading.
-* All the files and info from those **23 Git exercises**.
-* Proof (my Git history) that I properly used commands like `add`, `commit`, `push`, `clone`, `init`, and more! ✔️
 
 ---
 
@@ -33,6 +24,4 @@ You'll find:
 * Keeping track of **files, saving changes, and uploading them**.
 * The fundamental ideas behind **branching and working with others**.
 
----
 
-Let's keep this energy going! 🔥 More tasks are coming to this repo soon - so **stay tuned!** 🚀
