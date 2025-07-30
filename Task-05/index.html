@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Author Book Finder</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="module" src="script.js" defer></script>
+</head>
+<body>
+  <div id="container">
+    <h1>📚 Author Book Finder</h1>
+    <div id="content">
+      <h2>Enter your favourite author name to find their books.</h2>
+      <form id="authorForm">
+        <input type="text" id="authorInput" placeholder="Enter author name" required />
+        <button type="submit">Find Books</button>
+      </form>
+      <h2 id="resultsHeader" class="left-aligned">Results:</h2>
+      <table id="bookTable">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Cover</th>
+          </tr>
+        </thead>
+        <tbody id="bookList"></tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

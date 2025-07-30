@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #0f0f0f;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2 {
+  color: rgb(122, 17, 213);
+  font-family: 'Trebuchet MS', sans-serif;
+  margin-top: 30px;
+  text-align: center;
+}
+
+#resultsHeader {
+  color: rgb(187, 213, 17);
+}
+
+.left-aligned {
+  text-align: left;
+  margin-left: 30px;
+}
+
+form {
+  text-align: center;
+  padding: 3%;
+}
+
+table {
+  width: 90%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+img {
+  width: 80px;
+  height: auto;
+}
+
