@@ -16,45 +16,7 @@ A fully local, privacy-preserving **Conversational Agentic RAG** chatbot built w
 ---
 
 ## System Architecture
-
-```
-User question
-      │
-      ▼
-┌─────────────────────┐
-│  Node 1 — Retrieve  │◄──── ChromaDB (211K chunks) + bge-reranker-base
-│  Semantic search +  │      meta-question? → skip to Generate
-│  cross-encoder rank │
-└────────┬────────────┘
-         │ top-3 chunks
-         ▼
-┌─────────────────────┐
-│  Node 2 — Grade     │  LLM judges: is context relevant?
-│  yes / no / memory  │
-└──┬──────────────┬───┘
-   │ grade=yes    │ grade=no
-   │              ▼
-   │    ┌──────────────────┐
-   │    │ Node 3 — Web     │◄──── Tavily Search API (live web)
-   │    │ Search fallback  │
-   │    └────────┬─────────┘
-   │             │ web context
-   ▼             ▼
-┌─────────────────────┐
-│  Node 4 — Generate  │◄──── llama3.1:8b + conversation history (MemorySaver)
-│  LLM answer with    │
-│  context + memory   │
-└────────┬────────────┘
-         │ answer
-         ▼
-┌─────────────────────┐
-│  Node 5 — Critique  │  Self-assess: is answer grounded?
-│  good / retry       │
-└────────┬────────────┘
-         │ good → END / retry → web_search (max 1x)
-         ▼
-   Final answer
-```
+![System Architecture](System_Architecture.png)
 
 ---
 
@@ -108,8 +70,6 @@ class AgentState(TypedDict):
 | Critique | `iterations >= 1` | END |
 | Critique | answer empty | Web Search |
 
-**Meta-question detection:** If the question contains keywords like "previous", "first", "asked", "said", the Retrieve node skips ChromaDB entirely and sets `search_type='memory'`. The Generate node then answers purely from `messages` history.
-
 ---
 
 ## Prompt and Control-Flow Strategy
@@ -153,22 +113,6 @@ Reply ONLY: good or retry
 | Current event — not in KB | Retrieve → Grade(no) → Web Search → Generate → Critique → END |
 | Follow-up / memory question | Retrieve(skip) → Grade(memory) → Generate(history) → END |
 | Multi-hop combining sources | Retrieve → Grade → [Web] → Generate(history+context) → END |
-
----
-
-## Technology Stack
-
-| Component | Technology | Version |
-|---|---|---|
-| LLM | Llama 3.1 8B via Ollama | llama3.1:8b |
-| Embedding model | BAAI/bge-m3 (GPU) | sentence-transformers |
-| Reranker | BAAI/bge-reranker-base (CPU) | sentence-transformers |
-| Vector store | ChromaDB (local, persistent) | 1.5.6 |
-| Agent framework | LangGraph | 1.1.6 |
-| RAG framework | LangChain | 1.2.15 |
-| Web search | Tavily Search API | langchain-tavily |
-| ML backend | PyTorch + CUDA | 2.6.0+cu124 |
-| Hardware | NVIDIA RTX 3050 6GB, Ubuntu 25.04 | CUDA 12.4 |
 
 ---
 
@@ -239,23 +183,13 @@ pip install --upgrade pip
 ### 2. Install PyTorch (match your CUDA version)
 
 ```bash
-# CUDA 12.1
-pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
-
-# CUDA 12.4
 pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124
 ```
 
 ### 3. Install dependencies
 
 ```bash
-pip install langchain langchain-community langchain-core \
-            langchain-ollama langchain-huggingface langchain-chroma \
-            langchain-tavily langgraph chromadb \
-            sentence-transformers transformers==4.48.0 \
-            datasets wikipedia-api arxiv trafilatura \
-            tavily-python jupyter ipykernel tqdm pandas numpy \
-            python-dotenv FlagEmbedding
+pip install requirements.txt
 ```
 
 ### 4. Pull the LLM
@@ -286,11 +220,6 @@ This notebook:
 - Stores everything in ChromaDB at `data/chroma_db/`
 - Downloads CoQA evaluation dataset to `data/processed/coqa_eval.csv`
 
-```bash
-# Run in Jupyter — select "RAG Project" kernel
-# Open: notebooks/01_ingestion.ipynb
-# Run All Cells
-```
 
 ### Step 2 — Run `02_basic_rag.ipynb`
 
