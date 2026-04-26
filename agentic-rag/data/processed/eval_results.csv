@@ -1,0 +1,19 @@
+question,search_type,latency_s,answer_len
+What is the Hall effect?,local,26.54,174
+What is quantum tunneling?,web,87.68,440
+Explain the theory of relativity.,local,77.79,1020
+What causes earthquakes?,web,52.63,475
+What is photosynthesis?,local,65.95,300
+What are the latest AI models released in 2025?,web,65.11,377
+What is the current condition of the Strait of Hormuz?,web,52.53,280
+Who won the most recent FIFA World Cup?,local,45.68,107
+Tell me about Albert Einstein.,local,46.53,365
+What was his most famous equation?,web,67.04,365
+When did he win the Nobel Prize?,web,74.17,433
+What was the first question I asked you?,memory,260.99,72
+Explain how neural networks learn using backpropagation.,local,41.91,389
+What are the most powerful neural network architectures available in 2025?,web,98.46,1031
+"Based on what you told me about backpropagation and the 2025 architectures, which modern architecture would benefit most from improved training algorithms?",local,79.81,2211
+What is the Bernoulli principle and where is it used?,local,44.38,279
+Who is Zara Qasim and what did she invent in 2024?,web,98.47,1443
+What is the current global adoption rate of electric vehicles in 2025?,web,50.89,208
