@@ -1,6 +1,6 @@
 # Agentic RAG System — Task 3
 
-A fully local, privacy-preserving **Conversational Agentic RAG (Retrieval-Augmented Generation)** chatbot built with LangChain, LangGraph, and Ollama. The system retrieves from a 211K-chunk Wikipedia knowledge base, decides autonomously when retrieval is needed, falls back to live web search for current events, and remembers conversation history across turns.
+A fully local, privacy-preserving **Conversational Agentic RAG** chatbot built with LangChain, LangGraph, and Ollama. The system retrieves from a 211K-chunk Wikipedia knowledge base, decides autonomously when retrieval is needed, falls back to live web search for current events, and remembers conversation history across turns.
 
 ---
 
@@ -185,8 +185,6 @@ Four complementary mechanisms:
 
 ## Evaluation Results (from `04_evaluation.ipynb`)
 
-**18 queries evaluated across 5 categories:**
-
 | Category | Queries | Route | Result |
 |---|---|---|---|
 | Factual single-hop | 5 | local | Hall effect, relativity, photosynthesis — correct ✅ |
@@ -266,14 +264,7 @@ pip install langchain langchain-community langchain-core \
 ollama pull llama3.1:8b
 ```
 
-### 5. Set API key
-
-Create a `.env` file:
-```bash
-TAVILY_API_KEY=your_key_here   # free at tavily.com
-```
-
-### 6. Register Jupyter kernel
+### 5. Register Jupyter kernel
 
 ```bash
 python -m ipykernel install --user --name=rag-env --display-name "RAG Project"
@@ -294,9 +285,6 @@ This notebook:
 - Embeds each chunk with `BAAI/bge-m3` on GPU
 - Stores everything in ChromaDB at `data/chroma_db/`
 - Downloads CoQA evaluation dataset to `data/processed/coqa_eval.csv`
-
-**Expected time:** ~15–20 minutes on RTX 3050 6GB  
-**Expected output:** `211,190 chunks stored in ChromaDB`
 
 ```bash
 # Run in Jupyter — select "RAG Project" kernel
