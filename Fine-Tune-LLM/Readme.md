@@ -279,10 +279,5 @@ llm-finetune-legal/
 │   ├── qualitative_radar.png
 │   └── full_evaluation.png
 │
-└── adapter/                         
-    ├── adapter_config.json
-    ├── adapter_model.safetensors
-    ├── tokenizer.json
-    ├── tokenizer_config.json
-    └── special_tokens_map.json
+└── final_legal_dataset.json
 ```
